@@ -1,0 +1,75 @@
+<!--pages/course/course.wxml-->
+
+<swiper class="swiper-banner" indicator-dots="true" indicator-color="#FFFFFF" indicator-active-color="#E32516" autoplay="true" interval="2000" duration="500">
+    <block wx:for="{{bannerData}}" wx:key="id">
+      <swiper-item >
+        <image src="{{item}}" class="banner-img"  bindtap="toExam"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+<view class="contentview">
+  <view class="scheduleList">
+    <view>
+      <text class="head-credit">已完成时长</text>
+      <text class="credit-value credits-value">{{stTime}}</text> 
+      <text class="head-credit">小时</text>
+    </view>
+    <view>
+      <text class="head-period">学习时长任务</text>
+      <text class="period-value credits-value">{{hour}}</text>
+      <text class="period-value">小时</text>
+    </view>
+    
+  </view>
+  <view class="type">
+    <view class="type-item" bindtap="typeClick" data-type="1">
+      <text class="{{type==1?'type-text':'type-text-default'}}">党史教育</text>
+      <view class="{{type==1?'type-line':'type-line-default'}}"></view>
+    </view>
+    <view class="type-item"  bindtap="typeClick" data-type="2">
+      <text class="{{type==2?'type-text':'type-text-default'}}">思想教育</text>
+      <view class="{{type==2?'type-line':'type-line-default'}}"></view>
+    </view>
+
+    <view class="type-item" bindtap="typeClick" data-type="3">
+      <text class="{{type==3?'type-text':'type-text-default'}}">警示教育</text>
+      <view class="{{type==3?'type-line':'type-line-default'}}"></view>
+    </view>
+
+    <view class="type-item"  bindtap="typeClick" data-type="4">
+      <text class="{{type==4?'type-text':'type-text-default'}}">英模教育</text>
+      <view class="{{type==4?'type-line':'type-line-default'}}"></view>
+    </view>
+  </view>
+
+  <scroll-view class="scrollview" scroll-y="true" bindscrolltolower="loadMoreData">
+    <block wx:for="{{courseList}}" wx:key="id">
+      <view class="scroll-item">
+        <image class="scroll-img" src="../../images/learning_module_icon_1.png"></image>
+        <text class="scroll-title">{{item.courseName}}</text>
+        <progress class="scroll-progress" percent="{{(item.completeChapterNum/item.totalChapterNum)*100}}" font-size="22rpx" activeColor="#E32516" border-radius="5"></progress>
+        <text class="progress-text">{{item.completeChapterNum}}/{{item.totalChapterNum}}</text>
+        <text class="scroll-study" bindtap="toStudy" data-pos="{{index}}">学</text>
+        <text class="scroll-exercise" bindtap="toExercise" data-pos="{{index}}">练</text>
+      </view>
+    </block>
+
+
+  </scroll-view>
+</view>
+
+
+
+<!-- 通知弹出框 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
+  <image class="imgbg" src="../../images/notice_popup_bg.png"></image>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">学习须知</view>
+    <scroll-view class="modal-scroll" scroll-y="true">
+      <view class="modal-content">
+        <text class="modal-text">发啊啊啊啊啊啊啊啊发发发发烦烦烦烦烦烦烦烦烦烦烦烦烦烦烦啊啊啊啊啊啊</text>
+      </view>
+    </scroll-view>
+    <text catchtap="clickButton" class="modal-btn">我知道了</text>
+  </view>
+</view>

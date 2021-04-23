@@ -1,0 +1,130 @@
+
+text{
+
+  color:#000;
+}
+/*banner*/
+.banner-warpper{
+  background:#8B1B23
+}
+.contentpage ,.banner{
+  margin:0 30rpx;
+  padding-top:50rpx;
+}
+.banner image,.banner view{
+  float:left;
+  box-sizing:border-box;
+  margin:30rpx 0 50rpx 0;
+
+}
+.banner image{
+ width:45%;
+ height:220rpx;
+ border-radius:10rpx;
+}
+.banner view{
+  width:55%;
+  text-align: left;
+  height:220rpx;
+  padding:40rpx;
+
+}
+.banner view .by{
+  color:#FE9938;
+  margin:15rpx 0;
+  display: block;
+  font-size:28rpx;
+}
+.banner view .name{
+ font-size:30rpx;
+  color: white
+}
+ .exerciseInfo .count{
+  color: white;
+  font-size:28rpx;
+}
+
+ .exerciseInfo view .by{
+  color:#FE9938;
+  margin:15rpx 0;
+}
+/* btn */
+
+.share{
+  position: inherit;
+
+}
+.share>view{
+  width:50%;
+  float:left;
+  margin:40rpx 0;
+
+}
+
+
+.share image{
+  height:100rpx;
+  margin:40rpx 20rpx;
+  width:90%;
+}
+
+.share .inviteBtn{
+  height:100rpx;
+  background: url('http://cdn2.pluslegal.cn/image/mini/constitution_abstract_btn_1@2x.png')no-repeat;
+  background-size: 100% 100%;
+  border-radius:0;
+  width:90%;
+}
+.share .toExercies{
+  height:100rpx;
+  background: url('http://cdn2.pluslegal.cn/image/mini/constitution_abstract_btn_2@2x.png')no-repeat;
+  background-size: 100% 100%;
+  border-radius:0;
+  width:90%;
+}
+.line {
+  width: 100rpx;
+  height: 8rpx;
+  margin: 30rpx auto;
+  background-color:#2379A6;
+}
+
+.instructions {
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  height:620rpx;
+  margin-top: 30rpx;
+  border:1rpx solid #1E73A4;
+  border-radius:20rpx;
+  box-shadow: 0 0 10px #B2BCCD;
+}
+
+.instructions .title {
+  padding-top: 30rpx;
+  font-size: 40rpx;
+  text-align: center;
+  color: #1E73A4;
+  letter-spacing: 4rpx;
+  font-weight:500;
+}
+
+.instructions .content {
+  font-size: 28rpx;
+  padding: 0 30rpx;
+}
+.rules{
+  padding:0 20rpx;
+  font-size:30rpx;
+  color:#000;
+  line-height: 1.5
+}
+.scroll-view_H{
+  height:430rpx;
+}
+::-webkit-scrollbar{
+  width:0;
+  height:0;
+  color:transparent;
+}

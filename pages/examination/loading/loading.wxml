@@ -1,0 +1,13 @@
+<!--pages/examination/loading/loading.wxml-->
+<view class="loadview">
+  <view class="circle">
+    <view class="circle2">
+      <view class="circle3">
+      </view>
+    </view> 
+  </view>
+</view>
+<view class="loadview2">
+  <text class="text">{{typeStr}}</text>
+  <!-- <text class="text" wx:if="{{type == 5}}">正在计算考试成绩</text> -->
+</view>

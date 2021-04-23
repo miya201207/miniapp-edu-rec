@@ -1,0 +1,77 @@
+<!-- <view class="contentview">
+  <view class="contentview2">
+    <view class="tab-h">
+      <view class="tab-item" data-current="0" bindtap="swichNav">
+        <text class="{{currentTab==0?'title-active':'title-default'}}">最新考试</text>
+      </view>
+      <view class="tab-item" data-current="1" bindtap="swichNav">
+        <text class="{{currentTab==1?'title-active':'title-default'}} ">往期考试</text>
+      </view>
+    </view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+      <swiper-item wx:for="{{[0,1]}}" wx:key="*this">
+        <view class="item" wx:if="{{listLength>0}}">
+          <image class="image-bg" src="{{examMsg.exam.themeUrl}}"></image>
+          <text class="item-title">{{examMsg.exam.theme}}</text>
+          <text class="item-unit">组织单位：任丘市司法局</text>
+          <text class="item-date">时间：{{examMsg.exam.startTime}}-{{examMsg.exam.endTime}}</text>
+          <image class="item-img" src="../../images/test_icon_down.png"></image>
+          <view class="item2">
+            <text class="next" bindtap="next">下一个</text>
+            <text class="signup" bindtap="signup" wx:if="{{currentTab==0}}">{{examMsg.examStatusContent}}</text>
+
+            <text class="signup" bindtap="lookOver" wx:else>{{examMsg.examStatusContent}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view> -->
+
+
+<view class="contentview">
+   <view class="currentExam">
+      <view class="title">
+        当前考核任务
+     </view>
+     <swiper class="swiper-banner" indicator-dots="true" indicator-color="#FFFFFF" indicator-active-color="#E32516" autoplay="true" interval="2000" duration="500">
+    <block wx:for="{{currentExamList}}" wx:key="id">
+      <swiper-item >
+        <image src="{{item.exam.bannerUrl}}" class="banner-img" data-examStatus="{{item.examStatus}}" bindtap="toExam" data-id="{{item.exam.id}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+   </view>
+
+   <view class="pastExam">
+    <view class="title">
+        历史考核任务
+     </view>
+        <swiper class="swiper-banner" indicator-dots="true" indicator-color="#FFFFFF" indicator-active-color="#E32516" autoplay="true" interval="2000" duration="500">
+        <block wx:for="{{pastExamList}}" wx:key="id">
+          <swiper-item >
+            <image src="{{item.exam.bannerUrl}}" class="banner-img" data-examStatus="{{item.examStatus}}"  data-id="{{item.exam.id}}" bindtap="toExam"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+   </view>
+
+
+   <view class="newExam">
+      <view class="title">日常练习</view>
+      <view class="dailyExam clearfix">
+        <view bindtap="toExercise">
+          <image class="bgImg" src="../../images/home_img_bg_4@3x.png"></image>
+          <image class="logoImg"  src="../../images/home_icon_4@3x.png"></image>
+          <text>专项答题</text>
+        
+        </view>
+        <view bindtap="imitaExercise">
+          <image class="bgImg" src="../../images/home_img_bg_4@3x.png"></image>
+          <image class="logoImg" src="../../images/home_icon_2@3x.png"></image>
+          <text> 模拟考试 </text>
+        </view>
+      </view> 
+   </view>
+</view>

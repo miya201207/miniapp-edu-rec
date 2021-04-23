@@ -1,0 +1,38 @@
+<view class="contentpage">
+
+  <view class="title">
+    <text class="congratulation">恭喜您完成本轮答题！</text>
+    <view class="totalInfo">本轮答题共<text>{{total}}</text>题，答对<text>{{correct}}</text>题，答错<text>{{wrong}}</text>题。</view>
+    <view class="wrongBtn">
+      易错题学习
+    </view>
+  </view>
+
+
+  <view class="questionContent">
+      <view class=" questionItem"  wx:for="{{errorList}}"  wx:key="*this">
+        <text>提问： {{item.miniQuestion.questionContent}} </text>
+        <text class="correntAnswer">正确答案：{{item.correctContent}}</text>
+        <text class="answerAnalysis">答案解析：{{item.miniQuestion.explains}} </text>
+        <text class="splitLine"></text>
+      </view>
+  </view>
+
+
+ <view class="share" >
+     <view>
+        <image bindtap='toIndex'  src='http://cdn2.pluslegal.cn/image/mini/record_btn_back@2x.png'></image>
+    </view>
+    <view>
+        <button class="inviteBtn" open-type="share" ></button>
+    </view>
+  </view> 
+
+
+
+
+
+
+
+
+</view>

@@ -1,0 +1,24 @@
+<!--pages/login/usermsg/usermsg.wxml-->
+<view class="contentview">
+  <view class="content">
+    <text class="topic">请填写您的个人信息</text>
+    <text class="hint">请按照规定填写您的个人信息！</text>
+    <text class="title">您的姓名：</text>
+    <input class="value" bindinput="nameInput"></input>
+    <view class="line"></view>
+    <text class="title">您的身份证号码：</text>
+    <input class="value" bindinput="idcardInput" type="idcard"></input>
+    <view class="line"></view>
+
+    <text class="title">您的单位：</text>
+    <text class="hint2">（填写规范任丘市XXX局,如任丘市司法局）</text>
+    <input class="value" bindinput="unitInput"></input>
+    <view class="line"></view>
+
+     <text class="title">您的执法证号：</text>
+    <input class="value" bindinput="enforceLawInput"></input>
+    <view class="line"></view>
+
+    <text class="sure" bindtap="makeSure">确定</text>
+  </view>
+</view>

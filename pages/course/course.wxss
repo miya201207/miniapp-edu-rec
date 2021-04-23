@@ -1,0 +1,169 @@
+/* pages/course/course.wxss */
+
+.contentview {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.type {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin:0 4%;
+  border:1px solid #ccc;
+}
+
+.type-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding:20rpx 0;
+}
+
+.type-text {
+  color: #222;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.type-text-default {
+  color: #999;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.type-line {
+  margin-top: 20rpx;
+  width: 55rpx;
+  height: 4rpx;
+  background: #e32516;
+  border-radius: 2rpx;
+}
+
+.type-line-default {
+  margin-top: 20rpx;
+  width: 55rpx;
+  height: 4rpx;
+  background: #fff;
+  border-radius: 2rpx;
+}
+
+.divider-line {
+  width: 100%;
+  height: 10rpx;
+  background: #f5f5f5;
+}
+
+.scrollview {
+  position: absolute;
+  bottom: 0rpx;
+  top: 320rpx;
+  width: 100%;
+}
+
+.scroll-item {
+  position: relative;
+  height: 157rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #dcdce4;
+}
+
+.scroll-img {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  height: 32rpx;
+  width: 24rpx;
+}
+
+.scroll-title {
+  position: absolute;
+  top: 30rpx;
+  left: 60rpx;
+  color: #222;
+  font-weight: 400;
+  font-size: 34rpx;
+}
+
+.scroll-progress {
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  width: 350rpx;
+}
+
+.progress-text {
+  color: #999;
+  font-size: 26rpx;
+  position: absolute;
+  bottom: 25rpx;
+  left: 400rpx;
+}
+
+.scroll-study {
+  position: absolute;
+  width: 76rpx;
+  height: 76rpx;
+  right: 136rpx;
+  bottom: 30rpx;
+  font-weight: 500;
+  border-radius: 50%;
+  background: #e32516;
+  color: #fff;
+  font-size: 34rpx;
+  line-height: 76rpx;
+  text-align: center;
+}
+
+.scroll-exercise {
+  position: absolute;
+  width: 76rpx;
+  height: 76rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  font-weight: 500;
+  border-radius: 50%;
+  border: 1rpx solid #e32516;
+  color: #e32516;
+  font-size: 34rpx;
+  line-height: 76rpx;
+  text-align: center;
+}
+
+.swiper-banner {
+  height: 307rpx;
+  width: 100%;
+}
+
+.banner-img {
+  height: 307rpx;
+  width: 100%;
+}
+.scheduleList{
+  width:100%;
+  margin:30rpx 0;
+}
+.scheduleList>view{
+  width:46%;
+  float:left;
+  height:100rpx;
+  line-height:100rpx;
+  text-align: center;
+  background:#e32516;
+  margin:0 2%;
+  color:#fff;
+}
+
+
+.credits-value{
+  font-weight:500;
+  padding:0 5rpx;
+}

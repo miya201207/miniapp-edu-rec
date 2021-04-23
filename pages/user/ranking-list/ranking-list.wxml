@@ -1,0 +1,32 @@
+<!--pages/user/ranking-list/ranking-list.wxml-->
+<view class="contentview">
+	<view class="content">
+		<block wx:if="{{!isHave}}">
+			<image class="img-default" src="../../../images/mine_default_icon_1.png"></image>
+			<text class="text-default">还没有记录哟</text>
+		</block>
+		<view class="content2" wx:else>
+			<text class="title">{{year}}年度本单位人员</text>
+			<text class="title">学习时长排行榜</text>
+			<view class="content3">
+				<text class="title-text">姓名</text>
+				<text class="title-text" decode="{{true}}">学习时长\n(小时)</text>
+				<text class="title-text">考试结果</text>
+			</view>
+			<scroll-view class="scrollview" scroll-y="true" bindscrolltolower="loadMoreData">
+				<view class="item" wx:for="{{myUnitsList}}" wx:key="*this">
+					<text class="title-text">{{item.name}}</text>
+					<text class="{{item.timeType == 1?'hour1':'hour0'}}">{{item.hour}}</text>
+					<text class="exam1" wx:if="{{item.examType == 1}}">{{item.examSt}}</text>
+					<text class="exam2" wx:elif="{{item.examType == 2}}">{{item.examSt}}</text>
+					<text class="exam3" wx:else>{{item.examSt}}</text>
+					<!-- <text class="title-text">张三</text>
+						<text class="{{item.timeType == 1?'hour1':'hour0'}}">0.5</text>
+						<text class="title-text">合格</text> -->
+				</view>
+
+			</scroll-view>
+		</view>
+
+	</view>
+</view>

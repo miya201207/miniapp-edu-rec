@@ -1,0 +1,61 @@
+/* pages/user/amend/amend.wxss */
+
+.contentview {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(227, 37, 22, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+}
+
+.content {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 0rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 12rpx 15rpx 0rpx rgba(62, 62, 62, 0.28);
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 90%;
+  margin-top: 40rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.value {
+  width: 90%;
+  color: #999;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}
+
+.value2 {
+  width: 90%;
+  color: #333;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}
+
+.line {
+  margin-top: 10rpx;
+  height: 2rpx;
+  background: #999;
+  width: 90%;
+}
+
+.sure {
+  margin-top: 52rpx;
+  color: #e32516;
+  font-size: 32rpx;
+  width: 90%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border: 1rpx solid rgba(240, 6, 21, 1);
+  border-radius: 44rpx;
+}

@@ -1,0 +1,26 @@
+<!--pages/user/amend/amend.wxml-->
+<view class="contentview">
+  <view class="content">
+    <text class="title">您的姓名：</text>
+    <text class="value">{{name}}</text>
+    <view class="line"></view>
+
+    <text class="title">你的手机号：</text>
+    <text class="value">{{tel}}</text>
+    <view class="line"></view>
+
+    <text class="title">您的身份证号：</text>
+    <text class="value">{{idCard}}</text>
+    <view class="line"></view>
+
+    <text class="title">您的单位：</text>
+    <input class="value2" value="{{unit}}" bindinput="unitInput"></input>
+    <view class="line"></view>
+
+     <text class="title">您的执法证号：</text>
+    <input class="value2" value="{{enforceLaw}}" bindinput="enforceLawInput"></input>
+    <view class="line"></view>
+
+    <text class="sure" bindtap="makeSure">确定</text>
+  </view>
+</view>

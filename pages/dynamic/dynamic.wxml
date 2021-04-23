@@ -1,0 +1,25 @@
+<!--pages/dynamic /dynamic.wxml-->
+<view class="parent">
+  <view class="title">
+    <block wx:for="{{titles}}"  wx:key="id">
+      <view bindtap="titleClick" data-pos="{{index}}">
+        <view class="{{currentTab == index?'title-text':'title-text-default'}}">{{item.name}}</view>
+        <view class="{{currentTab == index?'title-line':'title-line-default'}}"></view>
+      </view>
+    </block>
+  </view>
+  <swiper class="swiper" style="height:{{winHeight}}rpx" current="{{currentTab}}" bindchange="switchTab">
+    <swiper-item wx:for="{{titles}}" wx:key="id">
+      <scroll-view class="scrollview-content" scroll-y="true" bindscrolltolower="loadMoreData">
+        <block wx:for="{{dynamicData}}" wx:key="id">
+          <view class="scroll-item" bindtap="itemClick" data-pos="{{index}}">
+            <view class="scroll-title">{{item.title}}</view>
+            <!-- <text class="scroll-name">小贝贝</text> -->
+            <text class="scroll-time">{{item.createTime}} 发布</text>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+</view>

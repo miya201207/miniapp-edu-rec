@@ -1,0 +1,26 @@
+<!--pages/examination/notice/notice.wxml-->
+<view class="contentview">
+  <view class="stripe"></view>
+  <view class="contentview2">
+    <text class="title">- 考试须知 -</text>
+    <view class="line"></view>
+    <text class="content">{{examMsg.exam.introduce}}</text>
+    <view class="line2"></view>
+    <view class="content" style="margin-bottom:30rpx" wx:if="{{type!=2}}">提交成绩后，请到个人中心查询考试成绩</view>
+    <block wx:else>
+      <text class="content">可以通过本次登录的手机号查询本次考试成绩</text>
+      <text class="inquire" bindtap="inquire">立即查询></text>
+    </block>
+
+  </view>
+  <!-- <block wx:if="{{type == 0}}">
+    <view class="exambtn">
+      <text class="examstart" bindtap="examstart">开始考试</text>
+      <text class="examagain" bindtap="examagain">使用补考卡考试</text>
+    </view>
+  </block> -->
+  <text class="examine" bindtap="examstart" wx:if="{{type == 0}}">开始考试</text>
+  <text class="examine" bindtap="examagain" wx:if="{{type == 1}}">使用补考卡考试</text>
+  <text class="examine" bindtap="examine" wx:if="{{type == 2}}">查看试卷</text>
+
+</view>

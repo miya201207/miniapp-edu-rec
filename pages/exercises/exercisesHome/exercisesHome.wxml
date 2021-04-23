@@ -1,0 +1,18 @@
+<!--pages/exercises/exercisesHome/exercisesHome.wxml-->
+<view class="contentpage">
+  <view class="exerciseBox clearfix">
+    <view class="exercieseList clearfix" wx:for="{{itemList}}" bindtap='toDetails' wx:key="*this" data-bankid='{{item.questionBank.id}}'>
+          <view class="item">
+          <image class="bgImg" src='{{item.questionBank.imgUrl}}'></image>
+           <view class="nums">
+              <text class="total">共{{item.questionBank.questionCount}}题,已完成{{item.finishCount}}题</text>
+              <!-- <text class="finished"></text> -->
+          </view> 
+            <text class="name">{{item.questionBank.bankName}}</text>
+        </view>
+       
+    </view>
+  </view>
+</view>
+
+<image class="bottom-bg" src="../../../images/home_bg.png"></image>

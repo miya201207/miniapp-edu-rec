@@ -1,0 +1,21 @@
+<!--pages/examination/inquire-grade/inquire-grade.wxml-->
+<view class="contentview">
+  <view class="stripe"></view>
+  <view class="contentview2">
+    <text class="title">- 查询成绩 -</text>
+    <view class="line"></view>
+    <view class="inquireview">
+      <input class="input" placeholder="输入准考证号查询成绩" bindinput="telInput" type="number"></input>
+      <text class="inquire-text" bindtap="inquireGrade">查询成绩</text>
+    </view>
+    <view class="lineview">
+      <view class="line2"></view>
+      <text class="line-text">or</text>
+      <view class="line2"></view>
+    </view>
+
+    <text class="inquire-text2" bindtap="quickInquireGrade">快速查询自己的成绩</text>
+  </view>
+  <text class="inquire-text3" bindtap="backIndex">返回首页</text>
+
+</view>

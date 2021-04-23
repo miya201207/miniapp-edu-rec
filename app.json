@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/learn/study/study",
+    "pages/exam/exam",
+    "pages/dynamic/dynamic",
+    "pages/clockIn/clockIn",
+    "pages/course/course",
+    "pages/examination/notice/notice",
+    "pages/examination/loading/loading",
+    "pages/dynamic-details/dynamic-details",
+    "pages/examination/test-paper/test-paper",
+    "pages/examination/test/test",
+    "pages/examination/test-result/test-result",
+    "pages/learn/note/note",
+    "pages/user/amend/amend",
+    "pages/user/learning-record/learning-record",
+    "pages/user/test-record/test-record",
+    "pages/examination/exam-result/exam-result",
+    "pages/login/login-default/login-default",
+    "pages/login/usermsg/usermsg",
+    "pages/login/tellogin/tellogin",
+    "pages/examination/inquire-grade/inquire-grade",
+    "pages/user/ranking-list/ranking-list",
+    
+    "pages/exercises/exercisesHome/exercisesHome",
+    "pages/exercises/exercisesDetail/exercisesDetail",
+    "pages/exercises/exercisesLoading/exercisesLoading",
+    "pages/exercises/exercisesGoing/exercisesGoing",
+    "pages/exercises/exercisesResult/exercisesResult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8B1B23",
+    "navigationBarTitleText": "政法教育整顿",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home_footer_icon_1_no@3x.png",
+        "selectedIconPath": "images/home_footer_icon_1_yes@3x.png"
+      },
+     
+      {
+        "pagePath": "pages/course/course",
+        "text": "学习",
+        "iconPath": "images/home_footer_icon_2_no@3x.png",
+        "selectedIconPath": "images/home_footer_icon_2_yes@3x.png"
+      },
+      {
+        "pagePath": "pages/clockIn/clockIn",
+        "text": "打卡",
+        "iconPath": "images/home_footer_icon_3_no@3x.png",
+        "selectedIconPath": "images/home_footer_icon_3_yes@3x.png"
+      },
+      {
+        "pagePath": "pages/exam/exam",
+        "text": "考试",
+        "iconPath": "images/home_footer_icon_4_no@3x.png",
+        "selectedIconPath": "images/home_footer_icon_4_yes@3x.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/home_footer_icon_5_no@3x.png",
+        "selectedIconPath": "images/home_footer_icon_5_yes@3x.png"
+      }
+    ],
+    "color": "#DCDCE4",
+    "selectedColor": "#E32516"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

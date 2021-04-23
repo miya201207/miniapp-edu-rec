@@ -1,0 +1,67 @@
+/* pages/login/login-default/login-default.wxss */
+
+.contentview {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 169rpx;
+  width: 136rpx;
+  height: 136rpx;
+  border-radius: 50%;
+}
+
+.wxbtn {
+  margin-top: 107rpx;
+  color: #e32516;
+  background-color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+  height: 88rpx;
+  border: 1rpx solid rgba(240, 6, 21, 1);
+  border-radius: 44rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wxlogin {
+  margin-top: 107rpx;
+  color: #e32516;
+  font-size: 30rpx;
+  width: 613rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  border: 1rpx solid rgba(240, 6, 21, 1);
+  border-radius: 44rpx;
+}
+
+.tellogin {
+  border: 1rpx solid rgba(34, 34, 34, 1);
+  border-radius: 44rpx;
+  margin-top: 30rpx;
+  width: 613rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.cancel {
+  margin-top: 30rpx;
+  width: 613rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgba(34, 34, 34, 1);
+  border: 1rpx solid #ccc;
+  border-radius: 44rpx;
+}

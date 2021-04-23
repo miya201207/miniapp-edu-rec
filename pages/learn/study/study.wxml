@@ -1,0 +1,106 @@
+<!--pages/study/study.wxml-->
+<view class="contentview">
+
+  <view class="head-bg">
+    <block wx:if="{{fileType == 1}}">
+      <image class="head-img" src="../../../images/learning_header_img_2.png"></image>
+      <view class="head-title">
+        <text class="title-text">{{courseName}}</text>
+        <view class="title-line"></view>
+      </view>
+    </block>
+    <video id="myVideo2" class="head-video2" wx:if="{{fileType == 2}}" src="{{fileUrl}}" show-fullscreen-btn="{{false}}" autoplay="{{autoPlay}}"></video>
+
+    <video id="myVideo" class="head-video" wx:if="{{fileType == 3}}" src="{{fileUrl}}" controls autoplay="{{autoPlay}}"></video>
+  </view>
+  <view class="type">
+    <view class="type-item" bindtap="typeClick" data-type="0">
+      <text class="{{currentTab==0?'type-text':'type-text-default'}}">目录</text>
+      <view class="{{currentTab==0?'type-line':'type-line-default'}}"></view>
+    </view>
+    <view class="type-item" style="margin-left:100rpx" bindtap="typeClick" data-type="1">
+      <text class="{{currentTab==1?'type-text':'type-text-default'}}">笔记</text>
+      <view class="{{currentTab==1?'type-line':'type-line-default'}}"></view>
+    </view>
+
+    <view class="type-item" style="margin-left:100rpx" bindtap="typeClick" data-type="2">
+      <text class="{{currentTab==2?'type-text':'type-text-default'}}">练习</text>
+      <view class="{{currentTab==2?'type-line':'type-line-default'}}"></view>
+    </view>
+  </view>
+  <view class="divider-line"></view>
+  <swiper class="swiper" style="height:{{winHeight}}rpx" current="{{currentTab}}" bindchange="switchTab">
+    <swiper-item wx:for="{{[1,2,3]}}" wx:key="*this">
+      <block wx:if="{{currentTab == 0}}">
+        <scroll-view class="scrollview" scroll-y="true" bindscrolltolower="loadMorChapterData">
+          <view class="item-one" wx:for="{{courseData}}" wx:key="id">
+            <image class="one-img" src="../../../images/learning_module_icon_1.png"></image>
+            <text class="one-text">{{item.chapterName}}</text>
+            <text wx:if="{{item.completed == 0}}" class="one-btn" data-pos="{{index}}" bindtap="studyClick">去学习</text>
+            <text wx:if="{{item.completed == 1}}" class="one-btn1" data-pos="{{index}}" bindtap="studyClick">{{item.minuteStr}}</text>
+          </view>
+        </scroll-view>
+      </block>
+
+      <block wx:elif="{{currentTab == 1}}">
+        <scroll-view class="scrollview" style="height:{{swiperHeight}}rpx" scroll-y="true" bindscrolltolower="loadMoreNoteData">
+          <view class="item-two" wx:for="{{noteData}}" wx:key="id">
+            <view class="two-view">
+              <image class="two-img" src="../../../images/learning_module_icon_2.png"></image>
+              <text class="two-author">{{item.createTime}}  由我添加</text>
+            </view>
+            <text class="two-text">{{item.noteContent}}</text>
+          </view>
+        </scroll-view>
+        <text class="add-note" bindtap="addNote">添加笔记</text>
+      </block>
+      <block wx:else>
+        <scroll-view class="scrollview" scroll-y="true" style="height:{{winHeight}}rpx">
+          <view class="default-view" wx:if="{{!haveExercise}}">
+            <image class="default-img" src="../../../images/mine_default_icon_1.png"></image>
+            <text class="default-text">该章节没有练习题</text>
+          </view>
+          <view class="exercise-view" wx:else>
+            <text class="exercise-title">当前第{{position+1}}题/共{{length}}题</text>
+            <text class="exercise-topic">{{examItem.content.question}}</text>
+
+            <view class="{{'answer-item'+examItem.state.flag1}}" bindtap="optionClick" data-pos="1">
+              <text class="{{'answer'+examItem.state.flag1}}">{{examItem.content.option1}}</text>
+              <image class="answer-img" src="../../../images/answer_icon_error.png" wx:if="{{examItem.state.flag1==2}}"></image>
+              <image class="answer-img" src="../../../images/answer_icon_right.png" wx:if="{{examItem.state.flag1==1}}"></image>
+            </view>
+
+            <view class="{{'answer-item'+examItem.state.flag2}}" bindtap="optionClick" data-pos="2">
+              <text class="{{'answer'+examItem.state.flag2}}">{{examItem.content.option2}}</text>
+              <image class="answer-img" src="../../../images/answer_icon_error.png" wx:if="{{examItem.state.flag2==2}}"></image>
+              <image class="answer-img" src="../../../images/answer_icon_right.png" wx:if="{{examItem.state.flag2==1}}"></image>
+            </view>
+
+            <view class="{{'answer-item'+examItem.state.flag3}}" bindtap="optionClick" data-pos="3">
+              <text class="{{'answer'+examItem.state.flag3}}">{{examItem.content.option3}}</text>
+              <image class="answer-img" src="../../../images/answer_icon_error.png" wx:if="{{examItem.state.flag3==2}}"></image>
+              <image class="answer-img" src="../../../images/answer_icon_right.png" wx:if="{{examItem.state.flag3==1}}"></image>
+            </view>
+
+            <view class="{{'answer-item'+examItem.state.flag4}}" bindtap="optionClick" data-pos="4">
+              <text class="{{'answer'+ examItem.state.flag4}}">{{examItem.content.option4}}</text>
+              <image class="answer-img" src="../../../images/answer_icon_error.png" wx:if="{{examItem.state.flag4==2}}"></image>
+              <image class="answer-img" src="../../../images/answer_icon_right.png" wx:if="{{examItem.state.flag4==1}}"></image>
+            </view>
+
+            <view class="analysis" wx:if="{{isAnalysis}}">{{examItem.content.answerAnalysis}}</view>
+
+            <view class="exercise-btn">
+              <text class="btn-last" bindtap="lastExercise">上一题</text>
+              <text class="btn-analysis" bindtap="analysisClick">答案解析</text>
+              <text class="btn-next" bindtap="nextExercise">下一题</text>
+            </view>
+          </view>
+        </scroll-view>
+
+      </block>
+    </swiper-item>
+  </swiper>
+
+
+</view>

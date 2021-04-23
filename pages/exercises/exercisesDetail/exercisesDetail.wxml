@@ -1,0 +1,40 @@
+<!-- <image class='bg' src='http://otxm0pud0.bkt.clouddn.com/image/jpg/background.png'></image> -->
+
+  <view class="banner-warpper">
+    <view class="banner clearfix">
+          <image src="{{img}}"></image>
+          <view class="exerciseInfo">
+            <text class="name text-1">{{name}}</text>
+            <text class="by">{{source}}</text>
+            <text class="count">共{{count}}题</text>
+          </view>
+      </view>
+  </view>
+  
+
+  <!-- 简介 -->
+  <view class="contentpage">
+  <view class="instructions">
+    <view class="title">简介信息</view>
+    <view class='line'></view>
+    <view>
+      <scroll-view scroll-y class='scroll-view_H'>
+        <view class='rules'>
+          <view>{{des}} </view>
+          </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 按钮 -->
+  <view class="share clearfix">
+    <view>
+      <button class="inviteBtn" open-type="share"></button>
+    </view>
+    <view>
+      <button bindtap='toExercising'  class="toExercies"></button>
+    </view>
+  </view>
+
+  
+</view>

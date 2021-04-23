@@ -1,0 +1,9 @@
+<!--pages/learn/note/note.wxml-->
+<view class="contentview">
+
+  <view class="content">
+    <textarea class="area" placeholder="请在此处添加笔记" bindinput="noteInput"></textarea>
+    <text class="save" bindtap="saveNote">保存</text>
+  </view>
+
+</view>

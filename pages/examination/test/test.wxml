@@ -1,0 +1,22 @@
+<!--pages/examination/test/test.wxml-->
+<view class="contentview">
+  <view class="stripe"></view>
+  <view class="contentview2">
+    <text class="title">- 第{{position}}题 -</text>
+    <view class="line"></view>
+    <text class="topic">【{{typeValue}}】{{topic}}</text>
+    <block wx:if="{{typeCode == 4}}">
+      <text class="fill-title">请在下方横线处填写答案：</text>
+      <input class="input" placeholder="请写出答案" bindinput="answerInput" value="{{answerValue}}"></input>
+      <view class="line2"></view>
+    </block>
+
+    <block wx:else>
+      <view class="{{item.isSelect?'answer':'answer-default'}}" wx:for="{{answers}}" bindtap="itemClick" data-pos="{{index}}">{{item.content}}</view>
+
+    </block>
+
+  </view>
+  <text class="next" bindtap="next">下一题</text>
+
+</view>

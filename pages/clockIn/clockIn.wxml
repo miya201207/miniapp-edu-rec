@@ -1,0 +1,30 @@
+<!--packageA/pages/checkin/checkinHome/checkinHome.wxml-->
+
+
+<!-- <view class="weui-cell weui-cell_input clearfix">
+  <view class="searchbar">
+      <input class="weui-input"  placeholder="请输入您要搜索的活动"  bindinput="listenersearchInput" />
+      <image class="searchBtn" bindtap="searchBar" src="https://cdn.pluslegal.cn/catalog_icon_search@2x.png"></image>
+  </view>      
+</view> -->
+
+<scroll-view class="scrollview list" scroll-y="true" refresher-enabled="true" bindscrolltolower="bindscrolltolower" bindrefresherrefresh="bindrefresherrefresh" refresher-triggered="{{isRefresh}}">
+		<block>
+        <view class="activityList clearfix">
+          <view class="ul clearfix">
+            <!-- <view wx:for="{{questionlist}}" wx:key="id"  bindtap="onclick" data-itemid='{{item.id}}' > -->
+              <view  bindtap="onclick" >
+                <image src="../../images/home_3_img_1@3x.png"> </image>
+                <text class="tojoin">立即参与</text>
+            </view>
+
+
+            <view  bindtap="onclick" >
+                <image src="../../images/home_3_img_2@3x.png"> </image>
+                <text class="tojoin">立即参与</text>
+            </view>
+          </view>
+         
+        </view>
+		</block>
+	</scroll-view>

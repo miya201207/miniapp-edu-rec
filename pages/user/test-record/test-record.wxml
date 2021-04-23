@@ -1,0 +1,33 @@
+<!--pages/user/test-record/test-record.wxml-->
+<view class="contentview">
+	<view class="content">
+		<block wx:if="{{!isHave}}">
+			<image class="img-default" src="../../../images/mine_default_icon_1.png"></image>
+			<text class="text-default">还没有考试记录哟</text>
+		</block>
+		<scroll-view class="scrollview" scroll-y="true" wx:else>
+
+			<view class="item3" wx:for="{{examRecordList}}" wx:key="*this">
+				<!-- <text class="item-date">{{item.eaeExamRecord.addTime}}</text>
+        <view class="item-point"></view>
+        <view class="item-line"></view>
+        <view class="item2">
+          <text class="item-content">参加“{{item.examName}}”，考试成绩{{item.eaeExamRecord.isPass==0?'不合格':'合格'}}</text>
+          <text class="item-btn" bindtap="testResult" data-pos="{{index}}">查看成绩单</text>
+        </view> -->
+
+				<view class="item-left">
+					{{item.eaeExamRecord.addTime}}
+				</view>
+				<view class="item-right">
+					<view class="item-point2"></view>
+					<text class="item-content">参加“{{item.examName}}”，考试成绩{{item.eaeExamRecord.isPass==0?'不合格':'合格'}}</text>
+					<text class="item-btn" bindtap="testResult" data-pos="{{index}}">查看成绩单</text>
+				</view>
+
+
+			</view>
+
+		</scroll-view>
+	</view>
+</view>

@@ -1,0 +1,61 @@
+/* pages/exercises/exercisesHome/exercisesHome.wxss */
+/* page{
+ background: url('http://cdn2.pluslegal.cn/image/mini/xz/home_bg@3x.png')no-repeat;
+ background-size: 100% 100%;
+} */
+.contentpage {
+  margin:0 10rpx;
+  padding:0;
+}
+.exerciseBox{
+  width:100%;
+  margin:40rpx 0;
+}
+.exercieseList{
+  width:46%;
+  float:left;
+  text-align: center;
+  box-sizing: border-box;
+  margin:2%;
+}
+.exercieseList image{
+  height:226rpx;
+  width:100%;
+}
+.exercieseList .item{
+  position:relative;
+}
+
+.exercieseList .nums{
+  height: 60rpx;
+  line-height: 60rpx;
+  background: linear-gradient(-90deg,rgba(30,114,163,1),rgba(17,163,174,1));
+  border-radius: 10px 0px 10px 0px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+}
+.exercieseList .nums>text{
+ margin:0 30rpx;
+ font-size:26rpx;
+}
+.exerciseBox .name{
+  font-size:28rpx;
+  margin:20rpx 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  color:#333;
+}
+
+.bottom-bg {
+  position: absolute;
+  bottom: 0rpx;
+  width: 100%;
+  height: 300rpx;
+  z-index: -1;
+}
+
+

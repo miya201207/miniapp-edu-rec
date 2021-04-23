@@ -1,0 +1,49 @@
+<!--pages/user/learning-record/learning-record.wxml-->
+<view class="contentview">
+	<view class="content">
+		<block wx:if="{{!isHave}}">
+			<image class="img-default" src="../../../images/mine_default_icon_1.png"></image>
+			<text class="text-default">还没有学习记录哟</text>
+		</block>
+
+		<view class="content2" wx:else>
+			<view class="title-view">
+				<view class="title-item">
+					<text class="title">已完成时长</text>
+					<text class="value">{{stTime}}小时</text>
+				</view>
+
+				<view class="title-item">
+					<text class="title">考核时长</text>
+					<text class="value">{{hour}}小时</text>
+				</view>
+			</view>
+			<view class="deliver-line"></view>
+
+			<scroll-view class="scrollview" scroll-y="true" bindscrolltolower="loadMoreData">
+
+				<view class="item3" wx:for="{{studyRecordList}}" wx:key="id">
+					<!-- <text class="item-date">{{item.createTime}}</text>
+					<view class="item-point"></view>
+					<view class="item-line"></view>
+					<view class="item2">
+						<text class="item-content" decode="{{true}}">学习课程{{item.courseName}}{{item.chapterName}}&nbsp;&nbsp;学习时长{{item.minute}}分钟。</text>
+					</view> -->
+					<view class="item-left">
+						{{item.createTime}}
+					</view>
+					<view class="item-right">
+						<view class="item-point2"></view>
+						<text class="item-content" decode="{{true}}">学习课程{{item.courseName}}{{item.chapterName}}&nbsp;&nbsp;学习时长{{item.minute}}分钟。</text>
+					</view>
+
+				</view>
+
+			</scroll-view>
+
+		</view>
+
+
+
+	</view>
+</view>

@@ -1,0 +1,55 @@
+<!--pages/examination/exam-result/exam-result.wxml-->
+<view class="contentview">
+  <view class="stripe"></view>
+  <view class="contentview2">
+    <text class="title">- 考试结果 -</text>
+    <view class="line"></view>
+    <open-data class="user-img" type='userAvatarUrl'></open-data>
+    <open-data class="user-name" type="userNickName"></open-data>
+    <text class="score">获得{{recordData.totalPoint}}分</text>
+
+    <view class="tab-head">
+      <view class="head-text1">题型</view>
+      <view class="head-text2" wx:if="{{single}}">
+        <view>单项</view>
+        <view>选择题</view>
+      </view>
+      <view class="head-text2" wx:if="{{multiple}}">
+        <view>多项</view>
+        <view>选择题</view>
+      </view>
+      <view class="head-text2" wx:if="{{unsureness}}">
+        <view>不定项</view>
+        <view>选择题</view>
+      </view>
+      <view class="head-text3" wx:if="{{check}}">判断题</view>
+      <view class="head-text3" wx:if="{{completion}}">填空题</view>
+      <view class="head-text4">总分</view>
+    </view>
+
+    <view class="tab-head2">
+      <view class="head-text1">分值</view>
+      <view class="head-text3" wx:if="{{single}}">{{examData.singlePoint}}</view>
+      <view class="head-text3" wx:if="{{multiple}}">{{examData.mulitplePoint}}</view>
+      <view class="head-text3" wx:if="{{unsureness}}">{{examData.unsurenessPoint}}</view>
+      <view class="head-text3" wx:if="{{check}}">{{examData.checkPoint}}</view>
+      <view class="head-text3" wx:if="{{completion}}">{{examData.completionPoint}}</view>
+      <view class="head-text4">{{examData.totalPoint}}</view>
+    </view>
+
+    <view class="tab-head2">
+      <view class="head-text1">得分</view>
+      <view class="head-text3" wx:if="{{single}}">{{recordData.singlePoint}}</view>
+      <view class="head-text3" wx:if="{{multiple}}">{{recordData.multiplePoint}}</view>
+      <view class="head-text3" wx:if="{{unsureness}}">{{recordData.unsurenessPoint}}</view>
+      <view class="head-text3" wx:if="{{check}}">{{recordData.checkPoint}}</view>
+      <view class="head-text3" wx:if="{{completion}}">{{recordData.completionPoint}}</view>
+      <view class="head-text4">{{recordData.totalPoint}}</view>
+    </view>
+
+    <view class="line2"></view>
+    <text class="examtime">考试时间:{{date.startTime}}-{{date.endTime}}</text>
+  </view>
+  <text class="examine" bindtap="checkPaper" wx:if="{{type==1}}">查看试卷</text>
+
+</view>

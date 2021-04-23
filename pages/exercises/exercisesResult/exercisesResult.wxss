@@ -1,0 +1,105 @@
+
+text{
+  color:#333
+}
+.contentpage{
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+
+
+}
+.totalInfo{
+   color:#fff;
+   font-size:34rpx;
+   margin:25rpx
+}
+.totalInfo>text{
+  display: inline-block;
+  color:#fff;
+  line-height: 1.8;
+  margin:0 5rpx;
+}
+.title{
+  background:url('http://cdn2.pluslegal.cn/image/mini/record_bg@2x.png')no-repeat;
+  background-size:100% 100%; 
+  text-align: center;
+  position: relative;
+  padding:100rpx 0;
+}
+
+.title>text.congratulation{
+  font-size:40rpx;
+  letter-spacing: 5rpx;
+   color:#fff;
+}
+.title .wrongBtn{
+  width:36%;
+  height:40px;
+  line-height:40px;
+  position:absolute;
+  bottom:-20px;
+  left:50%;
+  margin-left:-18%;
+  font-size:15px;
+  background:linear-gradient(83deg,rgba(255,155,59,1),rgba(235,117,12,1));
+  border-radius:38px;
+  color:#fff;
+
+}
+.questionContent {
+  position: relative;
+  flex:1;
+  overflow-y: scroll;
+  margin:90rpx 0 40rpx 0;
+
+}
+
+.questionContent .questionItem>text{
+  padding:24rpx 0;
+  font-size:32rpx;
+  line-height:1.6;
+   margin:0 30rpx 20rpx 30rpx;
+
+
+}
+
+.questionItem .correntAnswer{
+  border-bottom:1px dashed #e5e5e5;
+}
+
+.questionItem .answerAnalysis{
+  color:#666;
+}
+
+.questionContent .questionItem>text.splitLine{
+  height:10rpx;
+  background:#e5e5e5;
+  padding:0;
+  margin:0;
+  width:100%;
+}
+.share{
+  position: inherit;
+
+}
+.share>view{
+  width:44%;
+  float:left;
+  margin:0 3%
+}
+.share image{
+  height:100rpx;
+  margin:40rpx 20rpx;
+  width:100%;
+}
+.share .inviteBtn{
+  height:100rpx;
+  margin:40rpx 20rpx;
+  background: url('http://cdn2.pluslegal.cn/image/mini/record_btn_invitations@2x.png')no-repeat;
+  background-size: 100% 100%;
+  border-radius:0;
+  width:auto;
+}

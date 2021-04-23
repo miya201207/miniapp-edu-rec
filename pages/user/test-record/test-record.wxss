@@ -1,0 +1,139 @@
+/* pages/user/test-record/test-record.wxss */
+
+.contentview {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(227, 37, 22, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+}
+
+.content {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 0rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 12rpx 15rpx 0rpx rgba(62, 62, 62, 0.28);
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollview {
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 270rpx;
+}
+
+.item-left{
+  width: 40%;
+  border-right: 1rpx solid #999;
+  padding-top: 25rpx;
+  padding-left: 30rpx;
+  color: #333;
+  font-size: 34rpx;
+}
+.item-right{
+  width: 60%;
+  padding: 25rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.item3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-date {
+  position: absolute;
+  top: 25rpx;
+  left: 30rpx;
+  color: #333;
+  font-size: 34rpx;
+}
+
+.item-date2 {
+  padding-top: 50rpx;
+  margin-left: 50rpx;
+  color: #333;
+  font-size: 34rpx;
+}
+
+.item-point {
+  position: absolute;
+  top: 40rpx;
+  left: 263rpx;
+  width: 17rpx;
+  height: 17rpx;
+  background: #e32516;
+  border-radius: 50%;
+}
+
+.item-point2 {
+  position: absolute;
+  top: 35rpx;
+  left: -9rpx;
+  width: 17rpx;
+  height: 17rpx;
+  background: #e32516;
+  border-radius: 50%;
+}
+
+.item-line {
+  position: absolute;
+  top: 0rpx;
+  left: 270rpx;
+  width: 2rpx;
+  height: 100%;
+  background: #999;
+  border-radius: 50%;
+}
+
+.item2 {
+  position: absolute;
+  top: 25rpx;
+  left: 315rpx;
+  right: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-content {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 45rpx;
+}
+
+.item-btn {
+  margin-top: 40rpx;
+  width: 246rpx;
+  height: 70rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  background: #e32516;
+  border-radius: 35rpx;
+}
+
+.img-default {
+  margin-top: 237rpx;
+  width: 323rpx;
+  height: 203rpx;
+}
+
+.text-default {
+  margin-top: 36rpx;
+  color: #9a9fb4;
+  font-size: 30rpx;
+}

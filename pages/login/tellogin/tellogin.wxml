@@ -1,0 +1,26 @@
+<!--pages/login/tellogin/tellogin.wxml-->
+<view class="contentview">
+  <view class="content">
+    <block wx:if="{{!isSend}}">
+      <text class="topic">手机快捷登录</text>
+      <text class="hint">为了方便进行联系，请输入您的常用手机号码</text>
+      <input class="value" placeholder="请输入您的手机号码" type="number" maxlength="11" bindinput="telInput"></input>
+      <view class="line"></view>
+      <text class="{{canSend?'sure':'sure-default'}}" bindtap="sendCode">发送验证码</text>
+    </block>
+    <block wx:else>
+      <text class="topic">输入验证码</text>
+      <text class="hint">验证码已发送至{{tel}}</text>
+      <view class="code" bindtap="numberClick">
+        <text class="number">{{msgCode[0]}}</text>
+        <text class="number">{{msgCode[1]}}</text>
+        <text class="number">{{msgCode[2]}}</text>
+        <text class="number">{{msgCode[3]}}</text>
+      </view>
+    </block>
+    <text class="send-again" wx:if="{{isSend}}" bindtap="sendAgain">重新发送验证码></text>
+
+    <input class="input" maxlength="4" type="number" focus="{{isFocus}}" bindinput="numberInput" value="{{tmpValue}}" hidden="{{false}}"></input>
+
+  </view>
+</view>

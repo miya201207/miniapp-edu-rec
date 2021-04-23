@@ -1,0 +1,59 @@
+<!--pages/exam/examGoing/examGoing.wxml-->
+<!-- 考试答题 -->
+
+<view class="contentpage">
+  <view class="questionContent">
+    <view class="questionDetails">
+      <!-- 问题 -->
+      <text class="question">{{miniQuestion.questionContent}}</text>
+      <view class="quetionInfo clearfix">
+        <text class="type">{{miniQuestion.miniQuestionBank.bankName}}</text>
+        <text class="num">{{currentQuestionPos+1}}/{{questionTotalCount}}</text>
+      </view>
+
+      <!-- 答案选项 -->
+      <block>
+        <view class="answerItem Type_1 " wx:for='{{answerList}}' wx:key="*this" >
+
+          <!-- 未点击 默认状态 -->
+          <view class="case-item" wx:if="{{!isShowAnswer & item.answerContent!=''}}" wx:key="{{index}}" bindtap='onAnswerItemClick' data-answerid='{{item.id}}' data-correct='{{item.correct}}'>
+            <text>{{item.answerContent}}</text>
+          </view>
+
+          <view wx:elif="{{isShowAnswer & item.answerContent!=''}}">
+
+            <!-- 用户选择答案之后 正确答案 -->
+            <view wx:if="{{item.correct==1}}" class='correctAnswer' wx:key="{{index}}" bindtap='onAnswerItemClick' data-answerid='{{item.id}}' data-correct='{{item.correct}}'>
+             <image src='../../../images/answer_icon_right.png'></image>
+                <text>{{item.answerContent}}</text>
+            </view>
+
+            <!-- 用户选择答案之后  错误答案-->
+            <view wx:elif="{{item.id==answerid }}" class='wrongAnswer' wx:key="{{index}}" bindtap='onAnswerItemClick' data-answerid='{{item.id}}' data-correct='{{item.correct}}'>
+              <image src='../../../images/answer_icon_error.png'></image>
+                   <text>{{item.answerContent}}</text>
+            </view>
+
+            <!-- 用户选择答案之后 默认状态-->
+            <view class="case-item" wx:else="{{item.correct==2}}" wx:key="{{index}}" bindtap='onAnswerItemClick' data-answerid='{{item.id}}' data-correct='{{item.correct}}'>
+               <text>{{item.answerContent}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="answerAnalysis" wx:if='{{isShowAnswerAnalysis}}'>
+    <text > {{ansewerAnalysis}}</text> 
+    <image src="../../../images/constitution_answer_img_1@2x.png"></image>
+  </view>
+  <view class="nextBtn">
+    <view bindtap='showAnswer'>
+      <image src='../../../images/constitution_answer_btn_1@2x.png'></image>
+    </view>
+    <view bindtap='goToNext'>
+      <image src='../../../images/constitution_answer_btn_2@2x.png'></image>
+    </view>
+  </view>
+</view>

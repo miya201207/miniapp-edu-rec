@@ -1,0 +1,17 @@
+<!--pages/examination/test-paper/test-paper.wxml-->
+<view class="contentview">
+  <view class="content">
+    <scroll-view class="scrollview" scroll-y="true">
+      <view class="item" wx:for="{{examList}}" wx:for-item="outItem">
+        <view class="item-topic">
+          <span class="number">[{{index+1}}/{{size}}]</span>{{outItem.qcontent}}
+        </view>
+        <view class="item-content">
+          <text class="mine-answer" wx:for="{{outItem.userAnswers}}">我的答案：{{item}}</text>
+          <text class="correct-answer" wx:for="{{outItem.correctAnswers}}">正确答案：{{item}}</text>
+        </view>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>

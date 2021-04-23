@@ -1,0 +1,44 @@
+<!--pages/mine/mine.wxml-->
+<view class="contentview">
+  <view class="content">
+    <view class="user">
+      <open-data class="user-img" type='userAvatarUrl'></open-data>
+      <text class="user-nick">{{name}}</text>
+      <text class="user-unit">{{unit}}</text>
+      <image class="user-edit" src="../../images/mine_icon_1.png" bindtap="amendClick"></image>
+      <text class="user-amend" bindtap="amendClick">修改</text>
+    </view>
+    <view class="user-line"></view>
+    <view class="item" bindtap="itemClick" data-type="0">
+      <image class="item-img" src="../../images/mine_icon_2.png"></image>
+      <text class="item-text">学习记录</text>
+      <image class="item-img2" src="../../images/mine_icon_click.png"></image>
+    </view>
+    <view class="item-line"></view>
+    <view class="item" bindtap="itemClick" data-type="1">
+      <image class="item-img" src="../../images/mine_icon_3.png"></image>
+      <text class="item-text">考试记录</text>
+      <image class="item-img2" src="../../images/mine_icon_click.png"></image>
+    </view>
+
+    <!-- <view class="item-line"></view>
+    <view class="item" bindtap="itemClick" data-type="3">
+      <image class="item-img" src="../../images/date_icon_closk@2x.png"></image>
+      <text class="item-text">打卡记录</text>
+      <image class="item-img2" src="../../images/mine_icon_click.png"></image>
+    </view> -->
+
+
+
+    <view class="user-line"></view>
+    <view class="item" bindtap="itemClick" data-type="2">
+      <image class="item-img" src="../../images/mine_icon_4.png"></image>
+      <text class="item-text">学习排行</text>
+      <image class="item-img2" src="../../images/mine_icon_click.png"></image> 
+     </view>
+    <view class="item-line"></view>
+
+    <text class="logout" bindtap="loginOut">退出登录</text>
+  </view>
+
+</view>

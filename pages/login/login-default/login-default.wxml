@@ -1,0 +1,12 @@
+<!--pages/login/login-default/login-default.wxml-->
+<view class="contentview">
+  <image class="logo" src="../../../images/logo.jpg"></image>
+  <!-- <button class="wxbtn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" style="width:80%">微信授权登录</button> -->
+
+   <button class="wxbtn" open-type="getPhoneNumber" lang="zh_CN" bindgetphonenumber="getPhoneNumber" style="width:80%">微信授权登录</button>
+
+  <!-- <text class="wxlogin" bindtap="wxlogin">微信授权登录</text> -->
+  <!-- <text class="tellogin" bindtap="tellogin">手机号验证码登录</text> -->
+
+   <text class="cancel" bindtap="cancel">取消登录</text>
+</view>

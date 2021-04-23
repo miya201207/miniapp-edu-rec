@@ -1,0 +1,6 @@
+<!--packageA/pages/exercises/exercisesLoading/exerciseLoading.wxml-->
+
+<view class="timeBox">
+   <view wx:if="{{fromType==2}}" class="mathing">{{time}}</view>
+    <view wx:else class="timer">{{time}}</view>
+</view>
